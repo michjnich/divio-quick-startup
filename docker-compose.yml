@@ -1,15 +1,15 @@
 version: "3.8"
 services:
   web:
-    build: "."
+    build: .
     ports:
-      - "8000:80"
+      - 8000:80
     volumes:
-      - ".:/app:rw"
-      - "./data:/data:rw"
+      - .:/app:rw
+      - ./data:/data:rw
     command: python manage.py runserver 0.0.0.0:80
     links:
-      - "database_default"
+      - database_default
     env_file: .env-local
 
   database_default:
@@ -19,4 +19,4 @@ services:
       POSTGRES_HOST_AUTH_METHOD: "trust"
       SERVICE_MANAGER: "fsm-postgres"
     volumes:
-      - ".:/app:rw"
+      - .:/app:rw
