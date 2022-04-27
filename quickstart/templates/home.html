@@ -1,0 +1,23 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CGI Demo</title>
+    <style>
+        .alignstuff {
+            margin: 20px auto 20px;
+            display: block;
+        }
+        </style>
+</head>
+<body>
+    <div>
+        <img class="alignstuff" src='{% static "divio-logo.png" %}' alt="Divio"/>
+        <img class="alignstuff" src='{% static "cgi.jpg" %}' alt="CGI"/>
+    </div>
+</body>
+</html>
